@@ -17,12 +17,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+//        setContentView(R.layout.activity_main);
 
-          //Create map in Java
-//        MapView myMapView = new MapView(MainActivity.this,null,null);
-//        myMapView.addLayer(new ArcGISDynamicMapServiceLayer("http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"));
-//        setContentView(myMapView);
+          //Create map in Java - Uncomment 3 lines below and comment out line 20 above
+
+        MapView myMapView = new MapView(MainActivity.this,null,null);
+        myMapView.addLayer(new ArcGISDynamicMapServiceLayer("http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"));
+        setContentView(myMapView);
 
 
     }
